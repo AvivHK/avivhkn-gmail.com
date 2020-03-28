@@ -1,0 +1,57 @@
+body{
+    background-color: #E8EBE4;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #F45B69;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.clients {
+    margin: 20px 50px;
+    border-radius: 5px;
+}
+
+.page-move {
+    width: 40px;
+    height: 30px;
+    background-color: #A1E5AB;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.display-page {
+    width: 70px;
+    height: 30px;
+    left: 110px;
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+#pagination {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+}
+
+.inputNumInPages {
+    height: 30px;
+    width: 55px;
+    justify-self: end;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 150px 160px;
+    margin-top: 10px;
+}

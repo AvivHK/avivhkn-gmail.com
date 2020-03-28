@@ -1,0 +1,34 @@
+.client{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding:5px;
+    background-color: #F8F4E3;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3px;
+}
+.client:hover{
+    background-color: #A31621;
+    color:white;
+}
+
+.client-prop{
+    border-right: 1px solid lightgray;
+}
+
+.fontIcons{
+    font-size: 20px;
+    margin:auto auto;
+    opacity:0.7;
+}
+
+
+
+.red{
+    color: rgb(228, 72, 72);
+    
+}
+
+.green{
+    color: rgb(79, 182, 79);
+
+}

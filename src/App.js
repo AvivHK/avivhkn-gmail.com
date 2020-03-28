@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { observer } from 'mobx-react'
+import Header from './Components/Header';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { observer, inject } from 'mobx-react'
+import Analytics from './Components/Analytics';
+import Actions from './Components/Actions';
+import Clients from './Components/Clients';
 
+@inject("clientsData")
 @observer
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      clients: []
+    }
+  }
+
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
-      </div>
+      <Router>
+        <Header />
+        <div className="mainRoutes">
+          <Route exact path="/" render={() =>
+            <div> Home</div>} />
+          <Route path="/client" exact component={Clients} />
+          <Route path="/actions" exact component={Actions} />
+          <Route path="/analytics" exact component={Analytics} />
+        </div>
+      </Router >
     );
   }
 }
